@@ -27,18 +27,18 @@ void lasdtest() {
   testSimpleExercise1B(loctestnum, loctesterr);
   stestnum += loctestnum; stesterr += loctesterr;
 
-  // loctestnum = 0; loctesterr = 0;
-  // testFullExercise1A(loctestnum, loctesterr);
-  // ftestnum += loctestnum; ftesterr += loctesterr;
+  loctestnum = 0; loctesterr = 0;
+  testFullExercise1A(loctestnum, loctesterr);
+  ftestnum += loctestnum; ftesterr += loctesterr;
 
-  // loctestnum = 0; loctesterr = 0;
-  // testFullExercise1B(loctestnum, loctesterr);
-  // ftestnum += loctestnum; ftesterr += loctesterr;
+  loctestnum = 0; loctesterr = 0;
+  testFullExercise1B(loctestnum, loctesterr);
+  ftestnum += loctestnum; ftesterr += loctesterr;
 
   cout << endl << "Exercise 1 (Simple Test) (Errors/Tests: " << stesterr << "/" << stestnum << ")" << endl;
-  // cout << endl << "Exercise 1 (Full Test) (Errors/Tests: " << ftesterr << "/" << ftestnum << ")" << endl;
+  cout << endl << "Exercise 1 (Full Test) (Errors/Tests: " << ftesterr << "/" << ftestnum << ")" << endl;
 
-  stestnum = 0; stesterr = 0; //ftestnum = 0; ftesterr = 0;
+  stestnum = 0; stesterr = 0; ftestnum = 0; ftesterr = 0;
 
   // ...
 
