@@ -19,6 +19,7 @@ class List : virtual public ClearableContainer,
              virtual public DictionaryContainer<Data>,
              virtual public LinearContainer<Data>{
 private:
+
 protected:
     using Container::size;
   typedef struct Node {
@@ -59,8 +60,8 @@ protected:
      Node *head = nullptr;
      Node *tail = nullptr;
 
+  
 public:
-
   // Default constructor
   List() = default;
 

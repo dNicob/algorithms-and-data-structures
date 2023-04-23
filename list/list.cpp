@@ -1,4 +1,5 @@
 
+
 namespace lasd {
 
 /* ************************************************************************** */
@@ -304,21 +305,16 @@ bool List<Data>::Remove(const Data& d) noexcept{
             this->RemoveFromFront();
             return true;
         }
-
-    
             Node* temp = head;
             Node* prev = temp;
             temp = temp->next;
-            while(temp->value != d && temp != nullptr){
+            while(temp != nullptr && temp->value != d){
                 prev = temp;
                 temp = temp->next;
             }
-
-
             if(temp == nullptr){
                 return false;
             }
-
             if(temp == tail){
                 prev->next = nullptr;
                 tail = prev;
@@ -326,14 +322,12 @@ bool List<Data>::Remove(const Data& d) noexcept{
                 this->size--;
                 return true;
             }
-
             prev->next = temp->next;
+            temp->next = nullptr;
             delete temp;
             this->size--;
             return true;
-      
    }
-
     return false;
 }
 

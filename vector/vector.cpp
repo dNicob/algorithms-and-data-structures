@@ -58,7 +58,6 @@ Vector<Data>::Vector(const Vector<Data>& v){
 //move-constructor
 template <typename Data>
 Vector<Data>::Vector(Vector<Data>&& v){
-    //il prof scambia le size e i puntatori con la funzione std::swap
     std::swap(size, v.size);
     std::swap(datas, v.datas);
 };
@@ -137,7 +136,7 @@ void Vector<Data>::Resize(const ulong newsize){
     }else{
         ulong limit = (this->size < newsize) ? this->size : newsize;
         this->size = newsize;
-        Data* tmpDatas = new Data[newsize];
+        Data* tmpDatas = new Data[newsize] {};
         for (ulong i = 0; i < limit; i++)
         {
             tmpDatas[i] = datas[i];

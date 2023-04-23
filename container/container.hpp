@@ -11,13 +11,9 @@ namespace lasd {
 class Container {
 
 private:
-
   // ...
-
 protected:
-
   ulong size = 0;
-
 public:
   // Destructor
   virtual ~Container() = default;
